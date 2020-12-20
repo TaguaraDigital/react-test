@@ -24,10 +24,10 @@ const HeroSection = ({ video="public", user }) => {
                 <VideoBg autoPlay loop muted src={(video === "cliente" ) ? Video2 : Video1 } type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroTitle className="title">You Web Factory</HeroTitle>
+                <HeroTitle className="title">Youssef Web Factory</HeroTitle>
                 {currentUser 
                     ?  <HeroText> Welcome { currentUser.email } </HeroText>
-                    :  <HeroText> Desarrollamos tu web a la medida</HeroText>
+                    :  <HeroText> Desarrollamos desde Caracas tu web a la medida</HeroText>
                 }
             </HeroContent>
         </HeroContainer>
