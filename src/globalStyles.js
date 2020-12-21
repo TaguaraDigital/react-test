@@ -6,12 +6,18 @@ import { createGlobalStyle, } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root {
     /* Colors */
-    --mainClr: #bedbbb;
-    --altClr: #a9c695;
+    --mainClr: #fbe10f;
+    --altClr: #1544c0;
     --lightClr: #f9f9f9;
     --darkClr: #5e6072;
-    --ctaClr: #e7111c;
-    --ctaInvClr: #5cb8d7; 
+    --ctaInvClr: #5210ac;
+    --ctaClr: #f86449;
+
+    --yellowClr: #fbe10f;
+    --blueClr: #1544c0;
+    --purpleClr: #5210ac;
+    --orangeClr: #f86449;
+
 
     /* other variables  */
     --header-height: 80px;
@@ -42,14 +48,14 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Bad Script', cursive;
     font-size: 2rem;
     
-    color: var(--darkClr);
+    color: var(--blueClr);
     text-align: center;
 
     &:after {
       content: '';
       height:3px;
       width: 5rem;
-      background-color: var(--darkClr);
+      background-color: var(--blueClr);
 
       position: absolute;
       bottom: 0;
@@ -74,7 +80,7 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     padding: 10px;
     font-size: 20px;
-    box-shadow: 3px 3px 3px rgba(0,0,0,.6)
+    box-shadow: 2px 2px 2px rgba(0,0,0,.6)
 }
 `;
 

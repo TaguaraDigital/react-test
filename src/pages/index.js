@@ -8,9 +8,9 @@ const Home = () => {
     return (
         <div>
             <HeroSection />
-            <AboutSection  id="about" title="About Public page" classes="title" bgClr="#ffff00" />
-            <AboutSection  id="service" title="Services public page" classes="title" bgClr="#0000ff" />
-            <AboutSection  id="project" title="projects public pages" classes="title" bgClr="#00ffff" />
+            <AboutSection  id="about" title="About Public page" classes="title" bgClr={'var(--orangeClr)'} />
+            <AboutSection  id="service" title="Services public page" classes="title" />
+            <AboutSection  id="project" title="projects public pages" classes="title" bgClr={'var(--orangeClr)'} />
         </div>
     )
 }

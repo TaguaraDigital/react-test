@@ -9,7 +9,9 @@ import Footer from "./components/Footer";
 import Home from "./pages";
 import Clientes from "./pages/Clientes";
 import SignUp from "./pages/WDS-SignUp";
-import Login from "./pages/WDS-Login";
+import Login from "./components/accountBox";
+
+// import Login from "./pages/Login";
 
 function App() {
   return (

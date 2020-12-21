@@ -26,7 +26,7 @@ export const AboutContent = styled.div`
 `;
 
 export const AboutTitle = styled.h1`
-    color: var(--ctaClr);
+    color: var(--blueClr);
     font-size: 3rem;
 
     @media screen and (max-width: 768px) {
@@ -35,7 +35,7 @@ export const AboutTitle = styled.h1`
 `;
 
 export const AboutText = styled.p`
-    color: var(--ctaClr);
+    color: var(--blueClr);
     max-width: 600px;
     font-size: 2.5rem;
     text-align: center;
