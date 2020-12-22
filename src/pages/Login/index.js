@@ -1,18 +1,21 @@
 import React, { useState,  } from 'react';
 import { useHistory } from 'react-router-dom';
 
-
 import { useAuth } from '../../contexts/AuthContext';
 
 import {
     Card,
     CardBody,
+    Title,
+    SmallText,
     CardMsgs,
     Form,
     FormGroup,
+    Input,
     Button,
     LoginContainer,
-
+    MuteLink,
+    BoldLink
 } from './Login.Styles'
 
 
@@ -49,14 +52,14 @@ const Login = () => {
         <LoginContainer>
             <Card>
                 <CardMsgs>
-                    <h2> Login </h2>
+                    <Title> Login </Title>
+                    <SmallText>Please enter your data</SmallText>
                     {isError && <p className='error' >{isError}</p>}
                 </CardMsgs>
                 <CardBody>
                     <Form onSubmit={handleSubmit} >
                         <FormGroup id="email">
-                            <label htmlFor="email">Email</label>
-                            <input
+                            <Input
                                 value={ email }
                                 type="email"
                                 name="email"
@@ -65,8 +68,7 @@ const Login = () => {
                         </FormGroup>   
 
                         <FormGroup id="password">
-                            <label htmlFor="password">Password</label>
-                            <input
+                            <Input
                                 value={ password }
                                 type="password"
                                 name="password"
@@ -77,9 +79,11 @@ const Login = () => {
                         <Button> Login </Button>
                     </Form>
                 </CardBody>
-                <div>
-                    Already have an a account? Log In    
-                </div>   
+
+                <MuteLink> 
+                    Don't have an account? 
+                    <BoldLink to='/signUp'> Sign Up </BoldLink>
+                </MuteLink>
             </Card>
         </LoginContainer>
     )

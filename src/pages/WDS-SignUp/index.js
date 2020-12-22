@@ -6,12 +6,16 @@ import { useAuth } from '../../contexts/AuthContext';
 import {
     Card,
     CardBody,
+    Title,
+    SmallText,
     CardMsgs,
     Form,
     FormGroup,
+    Input,
     Button,
     SignUpContainer,
-
+    MuteLink,
+    BoldLink
 } from './SignUp.Styles'
 
 
@@ -54,14 +58,14 @@ const SignUp = () => {
         <SignUpContainer>
             <Card>
                 <CardMsgs>
+                    <Title> Sign Up </Title>
+                    <SmallText>Please enter your data</SmallText>
                     {isError && <p className='error' >{isError}</p>}
-                    <h2 className="title"> Sign Up</h2>
                 </CardMsgs>
                 <CardBody>
                     <Form onSubmit={handleSubmit} >
                         <FormGroup id="email">
-                            <label htmlFor="email">Email</label>
-                            <input
+                            <Input
                                 value={ email }
                                 type="email"
                                 name="email"
@@ -70,8 +74,7 @@ const SignUp = () => {
                         </FormGroup>   
 
                         <FormGroup id="password">
-                            <label htmlFor="password">Password</label>
-                            <input
+                            <Input
                                 value={ password }
                                 type="password"
                                 name="password"
@@ -80,8 +83,7 @@ const SignUp = () => {
                         </FormGroup>   
 
                         <FormGroup id="passwordConf">
-                            <label htmlFor="passwordConf">Confirm Password</label>
-                            <input
+                            <Input
                                 value={ passwordConf }
                                 type="password"
                                 name="passwordConf"
@@ -89,12 +91,14 @@ const SignUp = () => {
                                 onChange={handlePasswordConf} />
                         </FormGroup>   
 
-                        <Button>Submit</Button>
+                        <Button>Sign Up</Button>
                     </Form>
                 </CardBody>
-                <div>
-                    Already have an a account? Log In    
-                </div>   
+                <MuteLink> 
+                    Already have an a account? 
+                    <BoldLink to='/login'> Login </BoldLink>
+                </MuteLink>
+
             </Card>
         </SignUpContainer>
     )

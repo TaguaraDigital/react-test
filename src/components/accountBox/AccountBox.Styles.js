@@ -13,7 +13,6 @@ export const LoginContainer = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 19px;
 `;
 
 export const BoxContainer = styled.div`
